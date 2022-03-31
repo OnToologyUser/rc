@@ -1,0 +1,106 @@
+{
+  "@context" : {
+    "Saiyan" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Saiyan"
+    },
+    "AbilityToFly" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#AbilityToFly"
+    },
+    "CanDefeatVillain" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatVillain"
+    },
+    "PlanetEarth" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetEarth"
+    },
+    "Android" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Android"
+    },
+    "SuperPowerful" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#SuperPowerful"
+    },
+    "hasFather" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#hasFather",
+      "@type" : "@id"
+    },
+    "CanDefeatCell" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatCell"
+    },
+    "Human" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Human"
+    },
+    "Character" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Character"
+    },
+    "Superior" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Superior"
+    },
+    "bornIn" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#bornIn",
+      "@type" : "@id"
+    },
+    "hasPower" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#hasPower",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "HumanLevel" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#HumanLevel"
+    },
+    "Race" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Race"
+    },
+    "builtBy" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#builtBy",
+      "@type" : "@id"
+    },
+    "PlanetNamek" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetNamek"
+    },
+    "Planet" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Planet"
+    },
+    "Namekian" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Namekian"
+    },
+    "CanDefeatBoo" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatBoo"
+    },
+    "CanNotFly" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanNotFly"
+    },
+    "CanDefeatFreezer" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatFreezer"
+    },
+    "Powerful" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Powerful"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isDestroyed" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#isDestroyed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "PlanetVegeta" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetVegeta"
+    },
+    "Power" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Power"
+    },
+    "CanFly" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanFly"
+    },
+    "hasChild" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#hasChild",
+      "@type" : "@id"
+    },
+    "Alien" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Alien"
+    },
+    "UltraPowerful" : {
+      "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#UltraPowerful"
+    }
+  }
+}
