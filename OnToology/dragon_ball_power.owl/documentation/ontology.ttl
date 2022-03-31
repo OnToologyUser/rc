@@ -1,0 +1,784 @@
+@prefix : <http://www.dbzpower.com/ontologies/dbz_power.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.dbzpower.com/ontologies/dbz_power.owl#> .
+
+<http://www.dbzpower.com/ontologies/dbz_power.owl> rdf:type owl:Ontology ;
+                                                    rdfs:comment """Ontology title: Dragon Ball Z Power
+Author: Pedro Iván Gazulla Giménez""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#bornIn
+:bornIn rdf:type owl:ObjectProperty ,
+                 owl:AsymmetricProperty ;
+        rdfs:domain :Character ;
+        rdfs:range :Planet ;
+        rdfs:comment "Deescribes the planet where a character was born."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#builtBy
+:builtBy rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ;
+         rdfs:domain :Android ;
+         rdfs:range :Character ;
+         rdfs:comment "Describes by whom an android was build."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#hasChild
+:hasChild rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hasFather ;
+          rdf:type owl:AsymmetricProperty ;
+          rdfs:domain :Character ;
+          rdfs:range :Character ;
+          rdfs:comment "Describes who is the child of a character."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#hasFather
+:hasFather rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ;
+           rdfs:domain :Character ;
+           rdfs:range :Character ;
+           rdfs:comment "Describes who is the father of a character."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#hasPower
+:hasPower rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Character ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "This is themost important property, describes the combat power that a character has. Is used to determine (by rules) other concpets like if a character is able to flight or if is able to defeat a main villiain."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#isDestroyed
+:isDestroyed rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Planet ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Determines if an planet is destroyed using a boolean value."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#AbilityToFly
+:AbilityToFly rdf:type owl:Class ;
+              rdfs:subClassOf :Character ;
+              rdfs:comment "Class that describes if a character can fly or not, it depends on its combat power."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Alien
+:Alien rdf:type owl:Class ;
+       rdfs:subClassOf :Race ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFather ;
+                         owl:allValuesFrom :Alien
+                       ] ;
+       owl:disjointWith :Android ,
+                        :Human ,
+                        :Namekian ,
+                        :Saiyan ;
+       rdfs:comment "This race encompasses all the characters that are not from the rest of races." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Android
+:Android rdf:type owl:Class ;
+         rdfs:subClassOf :Race ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :builtBy ;
+                           owl:allValuesFrom :Character
+                         ] ;
+         owl:disjointWith :Human ,
+                          :Namekian ,
+                          :Saiyan ;
+         rdfs:comment "This race encompasses all the characters that are built by other characters." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatBoo
+:CanDefeatBoo rdf:type owl:Class ;
+              rdfs:subClassOf :CanDefeatVillain ;
+              rdfs:comment "The third main villain of the serie. He is more powerful than Call and Freezer." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatCell
+:CanDefeatCell rdf:type owl:Class ;
+               rdfs:subClassOf :CanDefeatVillain ;
+               rdfs:comment "The second main villain of the serie. he is more powerful than Freezer." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatFreezer
+:CanDefeatFreezer rdf:type owl:Class ;
+                  rdfs:subClassOf :CanDefeatVillain .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatVillain
+:CanDefeatVillain rdf:type owl:Class ;
+                  rdfs:subClassOf :Character ;
+                  rdfs:comment "This class encompasses the three main villains of the serie, is used to determine if a character would be able to defeat them." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#CanFly
+:CanFly rdf:type owl:Class ;
+        rdfs:subClassOf :AbilityToFly ;
+        owl:disjointWith :CanNotFly ,
+                         :HumanLevel ;
+        rdfs:comment "This class describes characters that can fly."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#CanNotFly
+:CanNotFly rdf:type owl:Class ;
+           rdfs:subClassOf :AbilityToFly ;
+           rdfs:comment "Characters that are not powerful can not fly." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Character
+:Character rdf:type owl:Class ;
+           rdfs:comment "Main class that encompasses the features of the characters."@en ;
+           rdfs:sameAs "https://dbpedia.org/ontology/FictionalCharacter" .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Human
+:Human rdf:type owl:Class ;
+       rdfs:subClassOf :Race ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFather ;
+                         owl:allValuesFrom :Human
+                       ] ;
+       owl:disjointWith :Namekian ;
+       rdfs:comment "This race encompasses all the characters that belong to the Earth." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#HumanLevel
+:HumanLevel rdf:type owl:Class ;
+            rdfs:subClassOf :Power ;
+            rdfs:comment "This level of combat power is minimum, the same as the owned by a common human." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Namekian
+:Namekian rdf:type owl:Class ;
+          rdfs:subClassOf :Race ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasFather ;
+                            owl:allValuesFrom :Namekian
+                          ] ;
+          owl:disjointWith :Saiyan ;
+          rdfs:comment "This race encompasses all the characters that belong to the planet Namek." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Planet
+:Planet rdf:type owl:Class ;
+        rdfs:comment "This class is the superclass of the tree main planets of the serie." ;
+        rdfs:sameAs "https://dbpedia.org/ontology/Planet" .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetEarth
+:PlanetEarth rdf:type owl:Class ;
+             rdfs:subClassOf :Planet ;
+             rdfs:comment "The planet where humans live." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetNamek
+:PlanetNamek rdf:type owl:Class ;
+             rdfs:subClassOf :Planet ;
+             rdfs:comment "The planet where namekians live." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetVegeta
+:PlanetVegeta rdf:type owl:Class ;
+              rdfs:subClassOf :Planet ;
+              rdfs:comment "The planet where sayans live." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Power
+:Power rdf:type owl:Class ;
+       rdfs:subClassOf :Character ;
+       rdfs:comment """The powers of the characters are extracted from the following URL: https://dragon-ball-teorias.fandom.com/es/wiki/Poderes_de_Pelea_de_DBZ_(Opini%C3%B3n)
+
+Depending on their power, characters are able to flight or not, also, the power defines if a character would be able to defeat one or more of the three main villains."""@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Powerful
+:Powerful rdf:type owl:Class ;
+          rdfs:subClassOf :Power ;
+          rdfs:comment "This level of combat power is reached by characters that train hard." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Race
+:Race rdf:type owl:Class ;
+      rdfs:subClassOf :Character ;
+      rdfs:comment "This class defines the race of the characters." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Saiyan
+:Saiyan rdf:type owl:Class ;
+        rdfs:subClassOf :Race ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasFather ;
+                          owl:allValuesFrom :Saiyan
+                        ] ;
+        rdfs:comment "This race encompasses all the characters that belong to the planet Vegeta." ;
+        rdfs:sameAs "https://es.dbpedia.org/page/Saiyajin" .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#SuperPowerful
+:SuperPowerful rdf:type owl:Class ;
+               rdfs:subClassOf :Power ;
+               rdfs:comment "This level of combat power is high compared with the level \"powerful\", but is not the highest one." .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Superior
+:Superior rdf:type owl:Class ;
+          rdfs:subClassOf :Power ;
+          rdfs:comment "Characters with this level of power and upper are able to flight."@en .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#UltraPowerful
+:UltraPowerful rdf:type owl:Class ;
+               rdfs:subClassOf :Power ;
+               rdfs:comment "The highest level of power, only the strongest characters and the main villains can achive it." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Android_16
+:Android_16 rdf:type owl:NamedIndividual ,
+                     :Android ;
+            :builtBy :Dr_Gero ;
+            :hasPower "380000000"^^xsd:int .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Android_17
+:Android_17 rdf:type owl:NamedIndividual ,
+                     :Android ;
+            :builtBy :Dr_Gero ;
+            :hasPower "300000000"^^xsd:int .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Android_18
+:Android_18 rdf:type owl:NamedIndividual ,
+                     :Android ;
+            :builtBy :Dr_Gero ;
+            :hasPower "280000000"^^xsd:int .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Android_19
+:Android_19 rdf:type owl:NamedIndividual ,
+                     :Android ;
+            :builtBy :Dr_Gero ;
+            :hasPower "85000000"^^xsd:int .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Bulma
+:Bulma rdf:type owl:NamedIndividual ,
+                :Human ;
+       :bornIn :Planet_Earth ;
+       :hasPower "1"^^xsd:int .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Burter
+:Burter rdf:type owl:NamedIndividual ,
+                 :Alien ;
+        :hasPower 42000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Buu
+:Buu rdf:type owl:NamedIndividual ,
+              :Alien ;
+     :hasPower 29000000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Cell
+:Cell rdf:type owl:NamedIndividual ,
+               :Android ;
+      :hasPower 10000000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Dende
+:Dende rdf:type owl:NamedIndividual ,
+                :Namekian ;
+       :bornIn :Planet_Namek ;
+       :hasPower 200 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Dr_Gero
+:Dr_Gero rdf:type owl:NamedIndividual ,
+                  :Android ;
+         :hasPower 90000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Freezer
+:Freezer rdf:type owl:NamedIndividual ,
+                  :Alien ;
+         :hasPower 120000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Ginyu
+:Ginyu rdf:type owl:NamedIndividual ,
+                :Alien ;
+       :hasPower 120000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Guldo
+:Guldo rdf:type owl:NamedIndividual ,
+                :Alien ;
+       :hasPower 3000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Jeice
+:Jeice rdf:type owl:NamedIndividual ,
+                :Alien ;
+       :hasPower 43000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Kame_Sennin
+:Kame_Sennin rdf:type owl:NamedIndividual ,
+                      :Human ;
+             :bornIn :Planet_Earth ;
+             :hasPower 10000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Kami
+:Kami rdf:type owl:NamedIndividual ,
+               :Namekian ;
+      :bornIn :Planet_Earth ;
+      :hasPower 1450000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#King_Piccolo
+:King_Piccolo rdf:type owl:NamedIndividual ,
+                       :Namekian ;
+              :bornIn :Planet_Namek ;
+              :hasPower 364 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Krilin
+:Krilin rdf:type owl:NamedIndividual ,
+                 :Human ;
+        :bornIn :Planet_Earth ;
+        :hasPower 510000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Mr_Satan
+:Mr_Satan rdf:type owl:NamedIndividual ,
+                   :Human ;
+          :bornIn :Planet_Earth ;
+          :hasChild :Videl ;
+          :hasPower 64 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Nappa
+:Nappa rdf:type owl:NamedIndividual ,
+                :Saiyan ;
+       :hasPower 7500 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Piccolo
+:Piccolo rdf:type owl:NamedIndividual ,
+                  :Namekian ;
+         :bornIn :Planet_Earth ;
+         :hasFather :King_Piccolo ;
+         :hasPower 1450000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Planet_Earth
+:Planet_Earth rdf:type owl:NamedIndividual ,
+                       :PlanetEarth ;
+              :isDestroyed "false"^^xsd:boolean .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Planet_Namek
+:Planet_Namek rdf:type owl:NamedIndividual ,
+                       :PlanetNamek ;
+              :isDestroyed "true"^^xsd:boolean .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Planet_Vegeta
+:Planet_Vegeta rdf:type owl:NamedIndividual ,
+                        :PlanetVegeta ;
+               :isDestroyed "true"^^xsd:boolean .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Raditz
+:Raditz rdf:type owl:NamedIndividual ,
+                 :Saiyan ;
+        :bornIn :Planet_Vegeta ;
+        :hasPower 1220 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Recoome
+:Recoome rdf:type owl:NamedIndividual ,
+                  :Alien ;
+         :hasPower 45000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Son_Gohan
+:Son_Gohan rdf:type owl:NamedIndividual ,
+                    :Saiyan ;
+           :bornIn :Planet_Earth ;
+           :hasPower 11000000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Son_Goku
+:Son_Goku rdf:type owl:NamedIndividual ,
+                   :Saiyan ;
+          :bornIn :Planet_Vegeta ;
+          :hasChild :Son_Gohan ,
+                    :Son_Gotten ;
+          :hasPower 30000000000 ;
+          rdfs:sameAs "https://dbpedia.org/page/Goku" .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Son_Gotten
+:Son_Gotten rdf:type owl:NamedIndividual ,
+                     :Saiyan ;
+            :bornIn :Planet_Earth ;
+            :hasPower "6000000"^^xsd:int .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Ten_Shin_Han
+:Ten_Shin_Han rdf:type owl:NamedIndividual ,
+                       :Human ;
+              :bornIn :Planet_Earth ;
+              :hasPower 1100000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Trunks
+:Trunks rdf:type owl:NamedIndividual ,
+                 :Saiyan ;
+        :bornIn :Planet_Earth ;
+        :hasPower 6000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Vegeta
+:Vegeta rdf:type owl:NamedIndividual ,
+                 :Saiyan ;
+        :bornIn :Planet_Vegeta ;
+        :hasChild :Trunks ;
+        :hasPower 8500000000 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Videl
+:Videl rdf:type owl:NamedIndividual ,
+                :Human ;
+       :bornIn :Planet_Earth ;
+       :hasPower 70 .
+
+
+###  http://www.dbzpower.com/ontologies/dbz_power.owl#Yamcha
+:Yamcha rdf:type owl:NamedIndividual ,
+                 :Human ;
+        :bornIn :Planet_Earth ;
+        :hasPower 160000 .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPower ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 100 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HumanLevel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CanNotFly ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPower ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 199999999 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <urn:swrl:var#p> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 10000000000 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CanDefeatFreezer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CanFly ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Powerful ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#p> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 28999999999 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPower ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CanDefeatFreezer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CanFly ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :UltraPowerful ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :CanDefeatCell ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :CanDefeatBoo ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPower ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 29000000000 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <urn:swrl:var#p> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 9999999999 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CanDefeatFreezer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CanFly ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :CanDefeatCell ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :SuperPowerful ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#p> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 120000000 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPower ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <urn:swrl:var#p> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 99 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CanFly ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Superior ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
