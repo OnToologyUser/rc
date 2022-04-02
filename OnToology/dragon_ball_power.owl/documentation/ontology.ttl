@@ -7,12 +7,35 @@
 @base <http://www.dbzpower.com/ontologies/dbz_power.owl#> .
 
 <http://www.dbzpower.com/ontologies/dbz_power.owl> rdf:type owl:Ontology ;
-                                                    rdfs:comment """Ontology title: Dragon Ball Z Power
-Author: Pedro Iván Gazulla Giménez""" .
+                                                    <http://purl.org/dc/terms/abstract> "With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc." ;
+                                                    <http://purl.org/dc/terms/creator> "Pedro Iván Gazulla Giménez" ;
+                                                    <http://purl.org/dc/terms/description> "This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki." ;
+                                                    <http://purl.org/dc/terms/license> "This ontology can be used by anyone in any way." ;
+                                                    <http://purl.org/dc/terms/title> "Dragon Ball Z Power" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
 rdfs:sameAs rdf:type owl:AnnotationProperty .

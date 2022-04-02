@@ -1,5 +1,8 @@
 {
   "@context" : {
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
     "Saiyan" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Saiyan"
     },
@@ -8,6 +11,9 @@
     },
     "CanDefeatVillain" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanDefeatVillain"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
     },
     "PlanetEarth" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#PlanetEarth"
@@ -48,6 +54,9 @@
     "Race" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Race"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
     "builtBy" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#builtBy",
       "@type" : "@id"
@@ -57,6 +66,9 @@
     },
     "Planet" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Planet"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
     },
     "Namekian" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Namekian"
@@ -88,6 +100,9 @@
     },
     "Power" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#Power"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
     },
     "CanFly" : {
       "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanFly"

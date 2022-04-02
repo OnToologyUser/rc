@@ -1,5 +1,9 @@
 <http://www.dbzpower.com/ontologies/dbz_power.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://www.dbzpower.com/ontologies/dbz_power.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology title: Dragon Ball Z Power\nAuthor: Pedro Iván Gazulla Giménez" .
+<http://www.dbzpower.com/ontologies/dbz_power.owl> <http://purl.org/dc/terms/abstract> "With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc." .
+<http://www.dbzpower.com/ontologies/dbz_power.owl> <http://purl.org/dc/terms/creator> "Pedro Iván Gazulla Giménez" .
+<http://www.dbzpower.com/ontologies/dbz_power.owl> <http://purl.org/dc/terms/description> "This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki." .
+<http://www.dbzpower.com/ontologies/dbz_power.owl> <http://purl.org/dc/terms/license> "This ontology can be used by anyone in any way." .
+<http://www.dbzpower.com/ontologies/dbz_power.owl> <http://purl.org/dc/terms/title> "Dragon Ball Z Power" .
 # 
 # 
 # #################################################################
@@ -8,6 +12,21 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2000/01/rdf-schema#sameAs
 <http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

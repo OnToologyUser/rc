@@ -518,10 +518,37 @@
     "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#CanFly"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Ontology title: Dragon Ball Z Power\nAuthor: Pedro Iván Gazulla Giménez"
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc."
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Pedro Iván Gazulla Giménez"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "This ontology can be used by anyone in any way."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Dragon Ball Z Power"
   } ]
 }, {
   "@id" : "http://www.dbzpower.com/ontologies/dbz_power.owl#AbilityToFly",
