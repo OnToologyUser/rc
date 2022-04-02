@@ -8,10 +8,14 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:dbz_power="http://www.dbzpower.com/ontologies/dbz_power.owl#">
     <owl:Ontology rdf:about="http://www.dbzpower.com/ontologies/dbz_power.owl">
-        <rdfs:comment>Ontology title: Dragon Ball Z Power
-Author: Pedro Iván Gazulla Giménez</rdfs:comment>
+        <terms:abstract>With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc.</terms:abstract>
+        <terms:creator>Pedro Iván Gazulla Giménez</terms:creator>
+        <terms:description>This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki.</terms:description>
+        <terms:license>This ontology can be used by anyone in any way.</terms:license>
+        <terms:title>Dragon Ball Z Power</terms:title>
     </owl:Ontology>
     
 
@@ -24,6 +28,36 @@ Author: Pedro Iván Gazulla Giménez</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
