@@ -19,6 +19,11 @@ It is obvious that not all the pitfalls are equally important; their impact in t
 
 
 
+#### SUGGESTION: symmetric or transitive object properties.. symmetric or transitive object properties. <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (2 cases detected).
+*The domain and range axioms are equal for each of the following object properties. Could they be symmetric or transitive?*
+
+    
+
 #### P08. Missing annotations <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (30 cases detected).
 *This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].*
 
@@ -31,11 +36,6 @@ It is obvious that not all the pitfalls are equally important; their impact in t
 
 #### P24. Using recursive definitions <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/important.png" height="15px"> (4 cases detected).
 *An ontology element (a class, an object property or a datatype property) is used in its own definition. Some examples of this would be: (a) the definition of a class as the enumeration of several classes including itself;  (b) the appearance of a class within its owl:equivalentClass or rdfs:subClassOf axioms; (c) the appearance of an object property in its rdfs:domain or range rdfs:range definitions; or (d) the appearance of a datatype property in its rdfs:domain definition.*
-
-    
-
-#### SUGGESTION: symmetric or transitive object properties.. symmetric or transitive object properties. <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (2 cases detected).
-*The domain and range axioms are equal for each of the following object properties. Could they be symmetric or transitive?*
 
     
 
