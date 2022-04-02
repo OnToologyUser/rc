@@ -9,8 +9,7 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:index-en="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#"
-     xmlns:dbz_power="http://www.dbzpower.com/ontologies/dbz_power.owl#">
+     xmlns:index-en="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#">
     <owl:Ontology rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html">
         <terms:abstract>With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc.</terms:abstract>
         <terms:creator>Pedro Iván Gazulla Giménez</terms:creator>
