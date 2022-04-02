@@ -19,13 +19,8 @@ It is obvious that not all the pitfalls are equally important; their impact in t
 
 
 
-#### P24. Using recursive definitions <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/important.png" height="15px"> (4 cases detected).
-*An ontology element (a class, an object property or a datatype property) is used in its own definition. Some examples of this would be: (a) the definition of a class as the enumeration of several classes including itself;  (b) the appearance of a class within its owl:equivalentClass or rdfs:subClassOf axioms; (c) the appearance of an object property in its rdfs:domain or range rdfs:range definitions; or (d) the appearance of a datatype property in its rdfs:domain definition.*
-
-    
-
-#### P13. Inverse relationships not explicitly declared <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (2 cases detected).
-*This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.*
+#### SUGGESTION: symmetric or transitive object properties.. symmetric or transitive object properties. <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (2 cases detected).
+*The domain and range axioms are equal for each of the following object properties. Could they be symmetric or transitive?*
 
     
 
@@ -34,8 +29,13 @@ It is obvious that not all the pitfalls are equally important; their impact in t
 
     
 
-#### SUGGESTION: symmetric or transitive object properties.. symmetric or transitive object properties. <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (2 cases detected).
-*The domain and range axioms are equal for each of the following object properties. Could they be symmetric or transitive?*
+#### P24. Using recursive definitions <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/important.png" height="15px"> (4 cases detected).
+*An ontology element (a class, an object property or a datatype property) is used in its own definition. Some examples of this would be: (a) the definition of a class as the enumeration of several classes including itself;  (b) the appearance of a class within its owl:equivalentClass or rdfs:subClassOf axioms; (c) the appearance of an object property in its rdfs:domain or range rdfs:range definitions; or (d) the appearance of a datatype property in its rdfs:domain definition.*
+
+    
+
+#### P13. Inverse relationships not explicitly declared <img src="https://raw.githubusercontent.com/OnToology/oops-report/master/sample/minor.png" height="15px"> (2 cases detected).
+*This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.*
 
     
 
