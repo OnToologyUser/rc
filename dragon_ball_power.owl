@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/arque/ontologies/2022/2/untitled-ontology-7#"
-     xml:base="http://www.semanticweb.org/arque/ontologies/2022/2/untitled-ontology-7"
+<rdf:RDF xmlns="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#"
+     xml:base="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,14 +8,14 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:index-en="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#">
     <owl:Ontology rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html">
-        <terms:abstract>With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc.</terms:abstract>
-        <terms:creator>Pedro Iván Gazulla Giménez</terms:creator>
-        <terms:description>This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki.</terms:description>
-        <terms:license>This ontology can be used by anyone in any way.</terms:license>
-        <terms:title>Dragon Ball Z Power</terms:title>
+        <dcterms:abstract>With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc.</dcterms:abstract>
+        <dcterms:creator>Pedro Iván Gazulla Giménez</dcterms:creator>
+        <dcterms:description>This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki.</dcterms:description>
+        <dcterms:license>This ontology can be used by anyone in any way.</dcterms:license>
+        <dcterms:title>Dragon Ball Z Power</dcterms:title>
     </owl:Ontology>
     
 
@@ -441,8 +441,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_16">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
-        <index-en:builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">380000000</index-en:hasPower>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">380000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -451,8 +451,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_17">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
-        <index-en:builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300000000</index-en:hasPower>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -461,8 +461,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_18">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
-        <index-en:builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">280000000</index-en:hasPower>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">280000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -471,8 +471,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_19">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
-        <index-en:builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85000000</index-en:hasPower>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -481,8 +481,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Bulma">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasPower>
     </owl:NamedIndividual>
     
 
@@ -491,7 +491,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Burter">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -500,7 +500,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Buu">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29000000000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29000000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -509,7 +509,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Cell">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000000000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -518,8 +518,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dende">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hasPower>
     </owl:NamedIndividual>
     
 
@@ -528,7 +528,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -537,7 +537,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Freezer">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -546,7 +546,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Ginyu">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -555,7 +555,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Guldo">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -564,7 +564,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Jeice">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -573,8 +573,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Kame_Sennin">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -583,8 +583,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Kami">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1450000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1450000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -593,8 +593,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#King_Piccolo">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">364</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">364</hasPower>
     </owl:NamedIndividual>
     
 
@@ -603,8 +603,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Krilin">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">510000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">510000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -613,9 +613,9 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Mr_Satan">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Videl"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Videl"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</hasPower>
     </owl:NamedIndividual>
     
 
@@ -624,7 +624,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Nappa">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7500</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7500</hasPower>
     </owl:NamedIndividual>
     
 
@@ -633,9 +633,9 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Piccolo">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasFather rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#King_Piccolo"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1450000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasFather rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#King_Piccolo"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1450000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -644,7 +644,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetEarth"/>
-        <index-en:isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</index-en:isDestroyed>
+        <isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isDestroyed>
     </owl:NamedIndividual>
     
 
@@ -653,7 +653,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetNamek"/>
-        <index-en:isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</index-en:isDestroyed>
+        <isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isDestroyed>
     </owl:NamedIndividual>
     
 
@@ -662,7 +662,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetVegeta"/>
-        <index-en:isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</index-en:isDestroyed>
+        <isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isDestroyed>
     </owl:NamedIndividual>
     
 
@@ -671,8 +671,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Raditz">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1220</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1220</hasPower>
     </owl:NamedIndividual>
     
 
@@ -681,7 +681,7 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Recoome">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45000</index-en:hasPower>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -690,8 +690,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gohan">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11000000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11000000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -700,10 +700,10 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Goku">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
-        <index-en:hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gohan"/>
-        <index-en:hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gotten"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gohan"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gotten"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000000000</hasPower>
         <rdfs:sameAs>https://dbpedia.org/page/Goku</rdfs:sameAs>
     </owl:NamedIndividual>
     
@@ -713,8 +713,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gotten">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -723,8 +723,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Ten_Shin_Han">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -733,8 +733,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Trunks">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -743,9 +743,9 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Vegeta">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
-        <index-en:hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Trunks"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8500000000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Trunks"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8500000000</hasPower>
     </owl:NamedIndividual>
     
 
@@ -754,8 +754,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Videl">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</hasPower>
     </owl:NamedIndividual>
     
 
@@ -764,8 +764,8 @@ Depending on their power, characters are able to flight or not, also, the power 
 
     <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Yamcha">
         <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
-        <index-en:bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
-        <index-en:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160000</index-en:hasPower>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160000</hasPower>
     </owl:NamedIndividual>
     
 
