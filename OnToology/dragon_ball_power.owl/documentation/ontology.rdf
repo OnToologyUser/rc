@@ -1,0 +1,1403 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#"
+     xml:base="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:index-en="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#">
+    <owl:Ontology rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html">
+        <terms:abstract>With this ontology we can know some capabilities of Dragon Ball Z Characters such as if they can fly, they can defeat some main villain, in what planet they where born, who is their father, etc.</terms:abstract>
+        <terms:creator>Pedro Iván Gazulla Giménez</terms:creator>
+        <terms:description>This ontology is used to infer capabilities of Dragon Ball Z Characters based on their Combat Power or Ki.</terms:description>
+        <terms:license>This ontology can be used by anyone in any way.</terms:license>
+        <terms:title>Dragon Ball Z Power</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#bornIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#bornIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:range rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet"/>
+        <rdfs:comment xml:lang="en">Deescribes the planet where a character was born.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#builtBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#builtBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <rdfs:range rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment xml:lang="en">Describes by whom an android was build.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasChild -->
+
+
+    <owl:ObjectProperty rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasChild">
+        <owl:inverseOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:range rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment xml:lang="en">Describes who is the child of a character.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather -->
+
+
+    <owl:ObjectProperty rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:range rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment xml:lang="en">Describes who is the father of a character.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower -->
+
+
+    <owl:DatatypeProperty rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">This is themost important property, describes the combat power that a character has. Is used to determine (by rules) other concpets like if a character is able to flight or if is able to defeat a main villiain.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#isDestroyed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#isDestroyed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Determines if an planet is destroyed using a boolean value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#AbilityToFly -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#AbilityToFly">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment xml:lang="en">Class that describes if a character can fly or not, it depends on its combat power.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather"/>
+                <owl:allValuesFrom rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <rdfs:comment>This race encompasses all the characters that are not from the rest of races.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#builtBy"/>
+                <owl:allValuesFrom rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <rdfs:comment>This race encompasses all the characters that are built by other characters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatBoo -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatBoo">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatVillain"/>
+        <rdfs:comment>The third main villain of the serie. He is more powerful than Call and Freezer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatCell -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatCell">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatVillain"/>
+        <rdfs:comment>The second main villain of the serie. he is more powerful than Freezer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatFreezer -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatFreezer">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatVillain"/>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatVillain -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatVillain">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment>This class encompasses the three main villains of the serie, is used to determine if a character would be able to defeat them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanFly -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanFly">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#AbilityToFly"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanNotFly"/>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#HumanLevel"/>
+        <rdfs:comment xml:lang="en">This class describes characters that can fly.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanNotFly -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanNotFly">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#AbilityToFly"/>
+        <rdfs:comment>Characters that are not powerful can not fly.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character">
+        <rdfs:comment xml:lang="en">Main class that encompasses the features of the characters.</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/ontology/FictionalCharacter</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather"/>
+                <owl:allValuesFrom rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <rdfs:comment>This race encompasses all the characters that belong to the Earth.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#HumanLevel -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#HumanLevel">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power"/>
+        <rdfs:comment>This level of combat power is minimum, the same as the owned by a common human.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather"/>
+                <owl:allValuesFrom rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <rdfs:comment>This race encompasses all the characters that belong to the planet Namek.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet">
+        <rdfs:comment>This class is the superclass of the tree main planets of the serie.</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/ontology/Planet</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetEarth -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetEarth">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet"/>
+        <rdfs:comment>The planet where humans live.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetNamek -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetNamek">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet"/>
+        <rdfs:comment>The planet where namekians live.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetVegeta -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetVegeta">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet"/>
+        <rdfs:comment>The planet where sayans live.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment xml:lang="en">The powers of the characters are extracted from the following URL: https://dragon-ball-teorias.fandom.com/es/wiki/Poderes_de_Pelea_de_DBZ_(Opini%C3%B3n)
+
+Depending on their power, characters are able to flight or not, also, the power defines if a character would be able to defeat one or more of the three main villains.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Powerful -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Powerful">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power"/>
+        <rdfs:comment>This level of combat power is reached by characters that train hard.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+        <rdfs:comment>This class defines the race of the characters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Race"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasFather"/>
+                <owl:allValuesFrom rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This race encompasses all the characters that belong to the planet Vegeta.</rdfs:comment>
+        <rdfs:sameAs>https://es.dbpedia.org/page/Saiyajin</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#SuperPowerful -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#SuperPowerful">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power"/>
+        <rdfs:comment>This level of combat power is high compared with the level &quot;powerful&quot;, but is not the highest one.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Superior -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Superior">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power"/>
+        <rdfs:comment xml:lang="en">Characters with this level of power and upper are able to flight.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#UltraPowerful -->
+
+
+    <owl:Class rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#UltraPowerful">
+        <rdfs:subClassOf rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Power"/>
+        <rdfs:comment>The highest level of power, only the strongest characters and the main villains can achive it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_16 -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_16">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">380000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_17 -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_17">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_18 -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_18">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">280000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_19 -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android_19">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <builtBy rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Bulma -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Bulma">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Burter -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Burter">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Buu -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Buu">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29000000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Cell -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Cell">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dende -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dende">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Dr_Gero">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Android"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Freezer -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Freezer">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Ginyu -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Ginyu">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Guldo -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Guldo">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Jeice -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Jeice">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Kame_Sennin -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Kame_Sennin">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Kami -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Kami">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1450000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#King_Piccolo -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#King_Piccolo">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">364</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Krilin -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Krilin">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">510000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Mr_Satan -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Mr_Satan">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Videl"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Nappa -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Nappa">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7500</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Piccolo -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Piccolo">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Namekian"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasFather rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#King_Piccolo"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1450000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetEarth"/>
+        <isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isDestroyed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Namek">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetNamek"/>
+        <isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isDestroyed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#PlanetVegeta"/>
+        <isDestroyed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isDestroyed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Raditz -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Raditz">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1220</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Recoome -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Recoome">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Alien"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gohan -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gohan">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11000000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Goku -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Goku">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gohan"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gotten"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000000000</hasPower>
+        <rdfs:sameAs>https://dbpedia.org/page/Goku</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gotten -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Son_Gotten">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Ten_Shin_Han -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Ten_Shin_Han">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Trunks -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Trunks">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Vegeta -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Vegeta">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Saiyan"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Vegeta"/>
+        <hasChild rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Trunks"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8500000000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Videl -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Videl">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Yamcha -->
+
+
+    <owl:NamedIndividual rdf:about="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Yamcha">
+        <rdf:type rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Human"/>
+        <bornIn rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Planet_Earth"/>
+        <hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160000</hasPower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29000000000</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9999999999</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatFreezer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatCell"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#SuperPowerful"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanFly"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#HumanLevel"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanNotFly"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">199999999</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000000000</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatFreezer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Powerful"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanFly"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28999999999</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatFreezer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatCell"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanDefeatBoo"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#UltraPowerful"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanFly"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Character"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000000</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#hasPower"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#p"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#Superior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://gazulla.github.io/rc/OnToology/dragon_ball_power.owl/documentation/index-en.html#CanFly"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
